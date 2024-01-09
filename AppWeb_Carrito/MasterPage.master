@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta name="description" content="free website template" />
+  <meta name="keywords" content="enter your keywords here" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style2.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+
+  <script type="text/javascript">
+      $(window).load(function () {
+          $('#slider').nivoSlider();
+      });
+  </script> 
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+         <div id="main">
+
+	<div id="menubar">
+	  <div id="welcome">
+	    <h1><a href="#">Welcome To Offices</a></h1>
+	  </div><!--close welcome-->
+      <div id="menu_items">
+	    <ul id="menu">
+          <li class="current"><a href="catalogos.aspx">PAGINAS</a></li>
+          <li><a href="catalogos.aspx">CATALOGO</a></li>
+          <li><a href="detalle.aspx">CARRITO</a></li>
+         
+        </ul>
+      </div><!--close menu-->
+    </div><!--close menubar-->	
+    
+	<div id="site_content">		
+
+	  <div id="banner_image">
+	    <div id="slider-wrapper">        
+          <div id="slider" class="nivoSlider">
+                 <img src="images/header2.jpg" alt="" />
+              
+                  <img src="images/header3.jpg" alt="" />
+            <img src="images/home_1.jpg" alt="" />
+            <img src="images/home_2.jpg" alt="" />
+		  </div><!--close slider-->
+		</div><!--close slider_wrapper-->
+	  </div><!--close banner_image-->	
+
+	    <!--close sidebar_container-->		  
+	 
+	  <div id="content">
+        <div class="content_item">
+		  <h1>&nbsp;</h1> 
+	      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+              
+        
+        </asp:ContentPlaceHolder>
+		   
+		    <!--close content_container-->
+            <!--close content_container-->		
+		    <!--close content_container-->
+            <!--close content_container-->			  
+		</div><!--close content_item-->
+      </div><!--close content-->   
+	
+	    <!--close content_blue--> 	
+	</div><!--close site_content--> 
+  
+  </div><!--close main-->
+  
+  <div id="footer">
+	  <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="http://fotogrph.com/">Images</a> | Heart Internet  <a href="http://www.heartinternet.co.uk/web-hosting/">Website Hosting</a> | website template by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>
+  </div><!--close footer-->  
+
+    <div>
+    </div>
+
+        <script>
+            function notiError(mensaje) {
+                Swal.fire({
+                    title: "Ocurrio un error",
+                    text: mensaje,
+                    icon: "error"
+                });
+            }
+
+            function notiExito(titulo, mensaje) {
+                Swal.fire({
+                    title: titulo,
+                    text: mensaje,
+                    icon: "success"
+                });
+            }
+            function notiAdvertencia(mensaje) {
+                Swal.fire({
+                    title: "Bienvenido",
+                    text: mensaje,
+                    icon: "warning"
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
